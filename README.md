@@ -57,24 +57,24 @@ The project includes multiple business-focused analytical reports created using 
 
 ### Revenue by Airline Pivot Table
 
-![Revenue Pivot](screenshots/01_revenue_pivot.png)
+(<Screenshots/Airline wise revenue_pivot.png>)
 
 ### Route-wise Revenue Analysis
 
-![Route Analysis](screenshots/02_route_analysis.png)
+(<Screenshots/Route Wise Revenue PT.png>)
 
 ### Monthly Revenue Trend
 
-![Monthly Trend](screenshots/03_monthly_trend.png)
+(<Screenshots/Month Wise Revenue PT.png>)
 
 ### Price Band Breakdown
 
-![Price Band](screenshots/04_price_band.png)
+(<Screenshots/Price Band Wise revenue PT.png>)g
 
 ### Stops Analysis
 
-![Stops Analysis](screenshots/05_stops_analysis.png)
+(<Screenshots/Stop Clean Revenue PT.png>)
 
 ### Departure City Revenue Analysis
 
-![Source City](screenshots/06_departure_analysis.png)
+(<Screenshots/Departure city wise revenue PT.png>)
