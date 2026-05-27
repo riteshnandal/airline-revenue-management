@@ -78,3 +78,51 @@ The project includes multiple business-focused analytical reports created using 
 ### Departure City Revenue Analysis
 
 (<Screenshots/Departure city wise revenue PT.png>)
+
+## KPI Dashboard & Interactive Analytics
+
+A professional KPI Dashboard was developed using Microsoft Excel to provide interactive airline revenue analysis and business intelligence reporting.
+
+### Dashboard Features
+
+- Interactive KPI Cards
+- Revenue Monitoring
+- Average Ticket Price Analysis
+- Top Airline Identification
+- Top Route Performance Tracking
+- Monthly Revenue Trend Analysis
+- Flight Volume Analysis
+- Dynamic Slicers for Interactive Filtering
+
+### Interactive Filters (Slicers)
+
+The dashboard includes slicers connected across pivot tables for dynamic analysis by:
+- Airline
+- Departure City
+- Stops Category
+- Price Band
+
+### Business Value
+
+The KPI Dashboard helps:
+- Track airline revenue performance
+- Identify high-performing routes
+- Monitor pricing patterns
+- Analyze customer travel trends
+- Support revenue optimization decisions
+
+### Dashboard Tools Used
+
+- Microsoft Excel
+- Pivot Tables
+- Pivot Charts
+- Combo Charts
+- KPI Reporting
+- Slicers
+- Data Visualization
+
+## KPI Dashboard Screenshots
+
+### Main KPI Dashboard
+
+![KPI Dashboard](screenshots/kpi_dashboard.png)
