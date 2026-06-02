@@ -125,4 +125,4 @@ The KPI Dashboard helps:
 
 ### Main KPI Dashboard
 
-![KPI Dashboard](screenshots/kpi_dashboard.png)
+![KPI Dashboard showing airline revenue management metrics with cards for Total Revenue 19,41,54,212.00, Avg Ticket Price 18,172.43, Total Flights 10684, Top Airline Jet Airways, Top Route DEL -> BOM -> COK; two bar charts below; slicers for Departure city, Date of Journey, and Airline](screenshots/kpi_dashboard.png)
