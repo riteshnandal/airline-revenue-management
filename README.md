@@ -126,3 +126,10 @@ The KPI Dashboard helps:
 ### Main KPI Dashboard
 
 [def]: screenshots/kpi_dashboard.png
+
+## 🔄 Recent Updates
+
+- Handled missing values in the dataset by identifying and updating NULL entries
+- Standardized `total_stops` column by replacing NULL values with "non stop"
+- Improved data consistency for better KPI accuracy
+- Continued SQL-based data cleaning and validation for reliable analysis results
