@@ -193,8 +193,12 @@ Airline datasets often contain:
 
 ## 📊 SQL Analysis (Core Work)
 
-### ✈️ Flights per Destination
+### ✈️ Revenue by Flights to Different Destinations
+
+This analysis focuses on understanding how revenue is generated across different flight destinations. It helps identify which destinations contribute the most to overall airline revenue.
+
 ```sql
-SELECT destination, COUNT(*) AS total_flights
+SELECT destination, SUM(revenue) AS total_revenue
 FROM flights
-GROUP BY destination;
+GROUP BY destination
+ORDER BY total_revenue DESC;
