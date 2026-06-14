@@ -53,32 +53,41 @@ The project includes multiple business-focused analytical reports created using 
 - GitHub
 - VS Code
 
-## Project Screenshots
+## 📊 Dashboard Preview
 
-### Revenue by Airline Pivot Table
+### Revenue & Performance Analysis
 
-(<Screenshots/Airline wise revenue_pivot.png>)
+![Main KPI Dashboard](screenshots/main_dashboard.png)
 
-### Route-wise Revenue Analysis
+---
 
-(<Screenshots/Route Wise Revenue PT.png>)
+### ✈️ Airline Revenue Analysis
+![Airline Revenue](screenshots/airline_revenue.png)
 
-### Monthly Revenue Trend
+---
 
-(<Screenshots/Month Wise Revenue PT.png>)
+### 🛣️ Route-wise Revenue Analysis
+![Route Analysis](screenshots/route_analysis.png)
 
-### Price Band Breakdown
+---
 
-(<Screenshots/Price Band Wise revenue PT.png>)g
+### 📅 Monthly Revenue Trend
+![Monthly Trend](screenshots/monthly_trend.png)
 
-### Stops Analysis
+---
 
-(<Screenshots/Stop Clean Revenue PT.png>)
+### 💰 Price Band Breakdown
+![Price Band Analysis](screenshots/price_band.png)
 
-### Departure City Revenue Analysis
+---
 
-(<Screenshots/Departure city wise revenue PT.png>)
+### 🛑 Stops-based Revenue Analysis
+![Stops Analysis](screenshots/stops_analysis.png)
 
+---
+
+### 🏙️ Departure City Revenue Contribution
+![City Revenue Contribution](screenshots/city_revenue.png)
 ## KPI Dashboard & Interactive Analytics
 
 A professional KPI Dashboard was developed using Microsoft Excel to provide interactive airline revenue analysis and business intelligence reporting.
@@ -123,9 +132,7 @@ The KPI Dashboard helps:
 
 ## KPI Dashboard Screenshots
 
-### Main KPI Dashboard
-
-[def]: screenshots/kpi_dashboard.
+![Main KPI Dashboard](screenshots/main_dashboard.png)
 
 # ✈️ Airline Data Analytics | SQL KPI Dashboard
 
