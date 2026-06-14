@@ -127,9 +127,67 @@ The KPI Dashboard helps:
 
 [def]: screenshots/kpi_dashboard.
 
-## 🔄 Recent Updates
+# ✈️ Airline Data Analytics | SQL KPI Dashboard
 
-- Handled missing values in the dataset by identifying and updating NULL entries
-- Standardized `total_stops` column by replacing NULL values with "non stop"
-- Improved data consistency for better KPI accuracy
-- Continued SQL-based data cleaning and validation for reliable analysis results
+![Visitors](https://img.shields.io/badge/SQL-Data%20Analysis-blue)
+![Status](https://img.shields.io/badge/Project-Completed-success)
+![Database](https://img.shields.io/badge/MySQL-Workbench-orange)
+![Focus](https://img.shields.io/badge/Domain-Airline%20Analytics-purple)
+
+---
+
+## 🚀 Project Summary
+
+A **real-world airline data analytics project** built using SQL to clean, transform, and analyze flight data.  
+The objective is to convert raw operational data into **business-ready KPIs and insights** for decision-making.
+
+This project demonstrates **data cleaning, exploratory analysis, and KPI dashboard preparation** using MySQL.
+
+---
+
+## 🎯 Business Problem
+
+Airline datasets often contain:
+- Missing values
+- Inconsistent route information
+- Unstructured stop details
+
+👉 This project solves these issues by transforming raw data into a **clean analytical dataset** ready for reporting.
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|------|--------|
+| MySQL | Database & Querying |
+| SQL | Data Cleaning & Analysis |
+| MySQL Workbench | Development Environment |
+| CSV Dataset | Raw Data Source |
+
+---
+
+## 🧹 Data Engineering Workflow
+
+### 1. Data Cleaning
+- Handled missing (`NULL`) values
+- Standardized inconsistent fields
+- Improved data reliability
+
+### 2. Feature Standardization
+- Converted `NULL` in `stops` → **"non stop"**
+- Ensured uniform categorical values
+
+### 3. Data Validation
+- Verified dataset integrity
+- Ensured consistency before analysis
+
+---
+
+## 📊 SQL Analysis (Core Work)
+
+### ✈️ Flights per Destination
+```sql
+SELECT destination, COUNT(*) AS total_flights
+FROM flights
+GROUP BY destination;
