@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="1" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">destination</Data></Cell>
+			<Cell><Data ss:Type="String">revenue_generated</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="String">Cochin</Data></Cell>
+			<Cell><Data ss:Type="Number">47817435.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Banglore</Data></Cell>
+			<Cell><Data ss:Type="Number">26293736.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">New Delhi</Data></Cell>
+			<Cell><Data ss:Type="Number">11107312.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Delhi</Data></Cell>
+			<Cell><Data ss:Type="Number">6507057.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Hyderabad</Data></Cell>
+			<Cell><Data ss:Type="Number">3526617.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Kolkata</Data></Cell>
+			<Cell><Data ss:Type="Number">1824949.00</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>

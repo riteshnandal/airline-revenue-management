@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="1" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">route</Data></Cell>
+			<Cell><Data ss:Type="String">route_revenue</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="String">DEL → BOM → COK</Data></Cell>
+			<Cell><Data ss:Type="Number">26027193.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">CCU → BOM → BLR</Data></Cell>
+			<Cell><Data ss:Type="Number">11246545.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">BLR → DEL</Data></Cell>
+			<Cell><Data ss:Type="Number">8630850.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">CCU → DEL → BLR</Data></Cell>
+			<Cell><Data ss:Type="Number">6081241.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">BLR → BOM → DEL</Data></Cell>
+			<Cell><Data ss:Type="Number">5962070.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">CCU → BLR</Data></Cell>
+			<Cell><Data ss:Type="Number">3298584.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">DEL → JAI → BOM → COK</Data></Cell>
+			<Cell><Data ss:Type="Number">2942817.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">DEL → AMD → BOM → COK</Data></Cell>
+			<Cell><Data ss:Type="Number">2611774.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">BOM → HYD</Data></Cell>
+			<Cell><Data ss:Type="Number">2442275.00</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">DEL → HYD → COK</Data></Cell>
+			<Cell><Data ss:Type="Number">2379582.00</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>

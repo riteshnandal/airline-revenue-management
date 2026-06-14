@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="1" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">airline</Data></Cell>
+			<Cell><Data ss:Type="String">avg_ticket_price</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="String">Jet Airways Business</Data></Cell>
+			<Cell><Data ss:Type="Number">46490.000000</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Jet Airways</Data></Cell>
+			<Cell><Data ss:Type="Number">11610.239990</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Multiple carriers Premium economy</Data></Cell>
+			<Cell><Data ss:Type="Number">11418.846154</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Multiple carriers</Data></Cell>
+			<Cell><Data ss:Type="Number">10902.678094</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Air India</Data></Cell>
+			<Cell><Data ss:Type="Number">9611.210616</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Vistara Premium economy</Data></Cell>
+			<Cell><Data ss:Type="Number">8962.333333</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Vistara</Data></Cell>
+			<Cell><Data ss:Type="Number">7796.348643</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">GoAir</Data></Cell>
+			<Cell><Data ss:Type="Number">5861.056701</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">IndiGo</Data></Cell>
+			<Cell><Data ss:Type="Number">5673.682903</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Air Asia</Data></Cell>
+			<Cell><Data ss:Type="Number">5590.260188</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">SpiceJet</Data></Cell>
+			<Cell><Data ss:Type="Number">4338.284841</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Trujet</Data></Cell>
+			<Cell><Data ss:Type="Number">4140.000000</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>
