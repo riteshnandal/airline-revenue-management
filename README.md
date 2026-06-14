@@ -62,7 +62,7 @@ The project includes multiple business-focused analytical reports created using 
 ---
 
 ### ✈️ Airline Revenue Analysis
-![Airline Revenue](/Users/apple/Desktop/airindia-revenue-dashboard/Screenshots/airline_revenue.png)
+![Airline Revenue](/Users/apple/Documents/GitHub/airline-revenue-management/Screenshots/airline_revenue.png)
 
 ---
 
