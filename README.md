@@ -57,37 +57,34 @@ The project includes multiple business-focused analytical reports created using 
 
 ### Revenue & Performance Analysis
 
-![Main KPI Dashboard](screenshots/main_dashboard.png)
+![Main KPI Dashboard](/Users/apple/Documents/GitHub/airline-revenue-management/Screenshots/main_dashboard.png)
 
 ---
 
 ### ✈️ Airline Revenue Analysis
-![Airline Revenue](screenshots/airline_revenue.png)
+![Airline Revenue](/Users/apple/Desktop/airindia-revenue-dashboard/Screenshots/airline_revenue.png)
 
 ---
 
 ### 🛣️ Route-wise Revenue Analysis
-![Route Analysis](screenshots/route_analysis.png)
+![Route Analysis](/Users/apple/Documents/GitHub/airline-revenue-management/Screenshots/route_analysis.png)
 
 ---
 
 ### 📅 Monthly Revenue Trend
-![Monthly Trend](screenshots/monthly_trend.png)
+![Monthly Trend](/Users/apple/Documents/GitHub/airline-revenue-management/Screenshots/monthly_trend.png)
 
 ---
 
 ### 💰 Price Band Breakdown
-![Price Band Analysis](screenshots/price_band.png)
+![Price Band Analysis](/Users/apple/Documents/GitHub/airline-revenue-management/Screenshots/price_band.png)
 
 ---
 
 ### 🛑 Stops-based Revenue Analysis
-![Stops Analysis](screenshots/stops_analysis.png)
+![Stops Analysis](/Users/apple/Documents/GitHub/airline-revenue-management/Screenshots/stops_analysis.png)
 
 ---
-
-### 🏙️ Departure City Revenue Contribution
-![City Revenue Contribution](screenshots/city_revenue.png)
 ## KPI Dashboard & Interactive Analytics
 
 A professional KPI Dashboard was developed using Microsoft Excel to provide interactive airline revenue analysis and business intelligence reporting.
