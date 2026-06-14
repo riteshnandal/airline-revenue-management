@@ -133,7 +133,3 @@ The KPI Dashboard helps:
 - Standardized `total_stops` column by replacing NULL values with "non stop"
 - Improved data consistency for better KPI accuracy
 - Continued SQL-based data cleaning and validation for reliable analysis results
-
-git add README.md
-git commit -m "Updated README with latest data cleaning and KPI improvements"
-git push
