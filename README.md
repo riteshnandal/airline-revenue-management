@@ -204,3 +204,4 @@ SELECT destination, SUM(revenue) AS total_revenue
 FROM flights
 GROUP BY destination
 ORDER BY total_revenue DESC;
+
