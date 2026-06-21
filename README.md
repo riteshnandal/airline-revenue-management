@@ -480,7 +480,7 @@ Including these would likely push R² above 0.85.
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/airline-revenue-management.git
+git clone https://github.com/riteshnandal/airline-revenue-management.git
 cd airline-revenue-management
 
 # Create and activate virtual environment
