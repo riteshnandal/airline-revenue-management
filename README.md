@@ -200,12 +200,14 @@ Airline datasets often contain:
 This analysis focuses on understanding how revenue is generated across different flight destinations. It helps identify which destinations contribute the most to overall airline revenue.
 
 ```sql
+
 SELECT destination, SUM(revenue) AS total_revenue
 FROM flights
 GROUP BY destination
 ORDER BY total_revenue DESC;
 
 ---
+```
 
 ## 🐍 Phase 3 — Python Data Cleaning, EDA & Price Forecasting
 
@@ -478,7 +480,7 @@ Including these would likely push R² above 0.85.
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/airline-revenue-management.git
+git clone https://github.com/riteshnandal/airline-revenue-management.git
 cd airline-revenue-management
 
 # Create and activate virtual environment
