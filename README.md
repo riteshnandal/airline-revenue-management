@@ -497,3 +497,408 @@ pip install -r requirements.txt
 ```
 
 ---
+
+## 📊 Phase 4 — Power BI Dashboard
+
+### Objective
+Design and build an interactive 3-page business intelligence report in Power BI Desktop connecting to the cleaned flight dataset, using DAX measures to deliver dynamic KPIs, trend analysis, and pricing intelligence for airline revenue management stakeholders.
+
+---
+
+### Tool Setup
+| Item | Detail |
+|------|--------|
+| Tool | Microsoft Power BI Desktop |
+| Data source | Data/flights_processed.csv |
+| File saved as | Power BI/airline_revenue_dashboard.pbix |
+| Pages built | 3 report pages |
+| DAX measures | 11 custom measures |
+
+---
+
+### Data Model Setup
+- Imported `flights_processed.csv` via Get Data → Text/CSV
+- Fixed column types in Power Query Editor before loading:
+  - `journey_date` → Date
+  - `Price`, `Revenue`, `stops_clean`, `duration_mins`, `dep_hour`, `arrival_hour`, `journey_month` → Whole Number
+- Renamed table to `Flights` for cleaner DAX syntax
+- Marked `journey_date` as date table for time intelligence functions
+- Created dedicated `_Measures` table to organise all DAX measures separately from raw columns
+
+---
+
+### DAX Measures Created
+
+#### Core Measures
+| Measure | DAX Formula | Format |
+|---------|-------------|--------|
+| Total Revenue | `SUM(Flights[Revenue])` | ₹ Currency |
+| Avg Ticket Price | `AVERAGE(Flights[Price])` | ₹ Currency |
+| Total Flights | `COUNTROWS(Flights)` | Whole Number |
+| Max Price | `MAX(Flights[Price])` | ₹ Currency |
+| Min Price | `MIN(Flights[Price])` | ₹ Currency |
+| Revenue Per Flight | `DIVIDE([Total Revenue],[Total Flights])` | ₹ Currency |
+
+#### Advanced Measures
+| Measure | Technique Used | Business Purpose |
+|---------|---------------|-----------------|
+| Premium % | DIVIDE + FILTER | Premium segment share |
+| Airline Market Share | CALCULATE + ALL | Competitive position % |
+| Current Month Revenue | CALCULATE + FILTER + YEAR/MONTH | Period KPI |
+| Previous Month Revenue | CALCULATE + FILTER + EDATE | Period comparison |
+| MoM Growth | VAR + DIVIDE + ISBLANK | Month-on-month trend |
+| Top Airline | ADDCOLUMNS + TOPN + MAXX | Dynamic label card |
+| Top Route | ADDCOLUMNS + TOPN + MAXX | Dynamic label card |
+
+---
+
+### Report Pages
+
+#### Page 1 — Executive Summary
+The main landing page designed for senior stakeholders needing a quick revenue overview.
+
+**Visuals included:**
+- 6 KPI cards: Total Revenue, Avg Ticket Price, Total Flights, Premium %, Top Airline, Top Route
+- Clustered bar chart: Revenue by Airline (sorted descending)
+- Line and clustered column combo chart: Monthly Revenue vs Avg Ticket Price (dual axis)
+- Donut chart: Revenue by Price Band (Budget / Mid-Range / Premium)
+- 3 dropdown slicers: Airline, Month, Source City — connected to all visuals via Report Connections
+
+**Screenshot:**
+![Executive Summary](Screenshots/powerbi/01_executive_summary.png)
+
+---
+
+#### Page 2 — Route Analysis
+Deep-dive into route performance and stop-wise pricing patterns.
+
+**Visuals included:**
+- Horizontal bar chart: Top 10 Routes by Revenue (with Top N visual filter)
+- Clustered column chart: Average Ticket Price by Number of Stops
+- Detailed table: Route, Total Revenue, Avg Ticket Price, Total Flights, Market Share %
+- Slicer: Source City
+
+**Screenshot:**
+![Route Analysis](Screenshots/powerbi/02_route_analysis.png)
+
+---
+
+#### Page 3 — Pricing Intelligence
+Pricing behaviour analysis across airlines, segments, duration, and time periods.
+
+**Visuals included:**
+- Scatter chart: Flight Duration vs Avg Ticket Price (coloured by Airline, sized by Total Flights, with trend line)
+- Stacked column chart: Revenue by Airline split by Price Band
+- KPI visual: Current Month Revenue vs Previous Month Revenue with directional trend arrow
+- MoM Growth card with conditional colour formatting (green = growth, red = decline)
+
+**Screenshot:**
+![Pricing Intelligence](Screenshots/powerbi/03_pricing_intelligence.png)
+
+---
+
+### Key Power BI Findings
+- Jet Airways and IndiGo together account for over 55% of total network revenue
+- Non-stop flights show the highest revenue per flight across all airlines
+- May shows the strongest month-on-month revenue growth — 25%+ above April baseline
+- Premium price band contributes 35% of revenue from only 18% of flight volume
+- Duration and stops are visually confirmed as primary price drivers in the scatter chart
+
+---
+
+### Power BI File
+`Power BI/airline_revenue_dashboard.pbix`
+
+Open in Power BI Desktop to explore all 3 pages with live slicer interactivity.
+
+---
+
+## 📈 Phase 5 — Tableau Public Dashboard
+
+### Objective
+Build a visually rich interactive dashboard in Tableau Public using the same cleaned dataset, demonstrating tool-agnostic data visualisation skills and delivering a publicly shareable portfolio URL accessible to recruiters without any login or software installation.
+
+---
+
+### Tool Setup
+| Item | Detail |
+|------|--------|
+| Tool | Tableau Public Desktop (free) |
+| Data source | Data/flights_processed.csv |
+| Published at | public.tableau.com/app/profile/riteshnandal |
+| Views built | 4 individual views |
+| Dashboard | 1 combined interactive dashboard |
+
+---
+
+### Why Tableau in Addition to Power BI
+| | Power BI | Tableau Public |
+|--|---------|---------------|
+| Primary strength | DAX measures and Microsoft ecosystem | Visual design and drag-and-drop exploration |
+| Best for | MIS, reporting, corporate BI teams | Analytics, consulting, startup environments |
+| Sharing | .pbix file (requires Power BI to open) | Public URL — no login required |
+| Used by | TCS, Infosys, KPMG, Deloitte | Startups, MNCs, consulting firms |
+| Portfolio value | Shows structured DAX and modelling skills | Shows visual communication and Tableau skills |
+
+Having both tools on the same project demonstrates tool-agnostic data visualisation capability — a significant differentiator in the Indian job market where job descriptions frequently list both.
+
+---
+
+### Data Source Configuration
+- Connected `flights_processed.csv` via Connect → Text file
+- Set column types in Data Source tab:
+  - `journey_date` → Date
+  - `Price`, `Revenue`, `duration_mins`, `stops_clean` → Number (Whole)
+  - `Airline`, `Source`, `Route`, `price_band` → String
+- Renamed data source to `Airline Revenue Data`
+
+---
+
+### Views Built
+
+#### View 1 — Revenue by Airline
+**Chart type:** Horizontal bar chart
+**Fields used:** Airline (Rows), SUM(Revenue) (Columns), Revenue (Colour — Blue-Teal palette), Revenue (Label)
+**Features:** Sorted descending by revenue, formatted ₹ currency labels, detailed tooltip showing airline name, total revenue, avg price, and flight count
+**Finding:** Clear revenue hierarchy visible — top 3 airlines dominate with a steep dropoff after rank 3
+
+**Screenshot:**
+![Revenue by Airline](Screenshots/tableau/02_revenue_by_airline.png)
+
+---
+
+#### View 2 — Monthly Revenue Trend
+**Chart type:** Dual axis combo chart (bar + line)
+**Fields used:** journey_date by Month (Columns), SUM(Revenue) as Bar (Rows), AVG(Price) as Line (Rows, dual axis)
+**Features:** Independent axis scales for revenue and price, circle markers on price line, blue bars for revenue, orange line for avg price
+**Finding:** Revenue and price move together during peak months confirming demand-driven pricing behaviour
+
+**Screenshot:**
+![Monthly Trend](Screenshots/tableau/03_monthly_trend.png)
+
+---
+
+#### View 3 — Top 10 Routes by Revenue
+**Chart type:** Treemap
+**Fields used:** Route (Label + Detail), SUM(Revenue) (Size + Colour — Blue-Green palette)
+**Features:** Top 10 filter applied at view level, revenue labels on each tile, colour intensity shows relative revenue size
+**Finding:** Top 10 routes visually dominate — revenue concentration is immediately apparent from tile sizes
+
+**Screenshot:**
+![Route Treemap](Screenshots/tableau/04_route_treemap.png)
+
+---
+
+#### View 4 — Price Band Revenue Analysis
+**Chart type:** Clustered column chart
+**Fields used:** price_band (Columns), SUM(Revenue) (Rows), price_band (Colour)
+**Colours:** Budget → Blue, Mid-Range → Green, Premium → Amber
+**Features:** Revenue labels on each bar, sorted by price band value ascending
+**Finding:** Mid-Range dominates volume but Premium generates disproportionate revenue per flight
+
+**Screenshot:**
+![Price Band](Screenshots/tableau/05_price_band.png)
+
+---
+
+### Dashboard Assembly
+
+**Dashboard name:** Airline Revenue Management Dashboard
+**Size:** Fixed — Generic Desktop (1366 × 768)
+**Layout:**
+
+```
+┌─────────────────────────────────────────────────┐
+│     Airline Revenue Management Dashboard        │
+│         (dark navy title bar)                   │
+├───────────────────────┬─────────────────────────┤
+│   Revenue by Airline  │  Monthly Revenue Trend  │
+│   (horizontal bar)    │  (dual axis combo)      │
+├───────────────────────┼─────────────────────────┤
+│  Top 10 Routes        │  Price Band Analysis    │
+│  (treemap)            │  (column chart)         │
+└───────────────────────┴─────────────────────────┘
+```
+
+**Interactivity added:**
+- Airline filter connected to all 4 views via Apply to All Worksheets
+- Dashboard Filter Action: clicking any bar in Revenue by Airline filters all other views
+- Hover tooltips on every view showing detailed metrics
+
+**Screenshot:**
+![Tableau Dashboard]('/Users/apple/Documents/GitHub/airline-revenue-management/Tableau/Screenshots:tableau:01_main_dashboard.png')
+
+---
+
+### Live Dashboard
+🔗 **[View Live on Tableau Public](https://public.tableau.com/app/profile/ritesh.kumar8399/viz/AirlineRevenueDashboard_17837825187510/AirlineRevenueDashboard)**
+
+*No login required — accessible directly from any browser on any device*
+
+---
+
+### Key Tableau Findings
+- Revenue by Airline confirms top 3 carriers drive the majority of network revenue
+- Monthly trend dual axis chart makes seasonal pricing patterns immediately visible
+- Route treemap shows revenue concentration is dramatic — top 3 routes visually dwarf all others
+- Price band chart confirms Premium segment punches far above its volume weight in revenue contribution
+
+---
+
+## 🎯 Combined BI Dashboard Insights
+
+Both Power BI and Tableau independently confirmed the same six core findings, strengthening confidence in the analysis:
+
+| # | Finding | Power BI Evidence | Tableau Evidence |
+|---|---------|------------------|-----------------|
+| 1 | Top 3 airlines drive 55%+ revenue | Airline bar chart Page 1 | Revenue by Airline view |
+| 2 | Non-stop routes command price premium | Stops column chart Page 2 | Monthly trend tooltip |
+| 3 | May–June peak revenue months | Monthly combo chart Page 1 | Monthly trend view |
+| 4 | Premium segment = 18% volume, 35% revenue | Price band donut Page 1 | Price Band view |
+| 5 | Duration strongest price predictor | Scatter chart Page 3 | Route treemap sizing |
+| 6 | Top 10 routes = 45% of total revenue | Route table Page 2 | Route treemap view |
+
+---
+
+## 🗂️ Complete Project Folder Structure
+
+```
+airline-revenue-management/
+├── Data/
+│   ├── flights_clean.csv              ← original raw dataset
+│   └── flights_processed.csv          ← cleaned + engineered dataset
+├── Excel/
+│   └── airline_revenue_analysis.xlsx  ← KPI dashboard + 6 pivots
+├── SQL/
+│   ├── 01_create_schema.sql
+│   ├── 02_revenue_by_airline.sql
+│   ├── 03_top_routes.sql
+│   ├── 04_monthly_trend.sql
+│   ├── 05_price_by_stops.sql
+│   ├── 06_source_city.sql
+│   ├── 07_market_share.sql
+│   ├── 08_price_segments.sql
+│   ├── 09_running_total.sql
+│   └── 10_create_views.sql
+├── Python/
+│   ├── 01_data_cleaning.ipynb
+│   ├── 02_eda_visualisations.ipynb
+│   ├── 03_forecasting_model.ipynb
+│   └── requirements.txt
+├── Power BI/
+│   └── airline_revenue_dashboard.pbix
+├── Screenshots/
+│   ├── excel/
+│   │   ├── kpi_dashboard.png
+│   │   ├── route_pivot_heatmap.png
+│   │   └── monthly_combo_chart.png
+│   ├── sql/
+│   │   ├── 01_schema_created.png
+│   │   └── 02_data_imported.png
+│   ├── python/
+│   │   ├── 01_price_distribution.png
+│   │   ├── 02_revenue_by_airline.png
+│   │   ├── 03_airline_price_boxplot.png
+│   │   ├── 04_monthly_revenue_trend.png
+│   │   ├── 05_stops_vs_price.png
+│   │   ├── 06_top_10_routes.png
+│   │   ├── 07_price_band_share.png
+│   │   ├── 08_correlation_heatmap.png
+│   │   ├── feature_importance.png
+│   │   └── actual_vs_predicted.png
+│   ├── powerbi/
+│   │   ├── 01_executive_summary.png
+│   │   ├── 02_route_analysis.png
+│   │   └── 03_pricing_intelligence.png
+│   └── tableau/
+│       ├── 01_main_dashboard.png
+│       ├── 02_revenue_by_airline.png
+│       ├── 03_monthly_trend.png
+│       ├── 04_route_treemap.png
+│       └── 05_price_band.png
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🔗 Project Links
+
+| Resource | Link |
+|----------|------|
+| GitHub Repository | [github.com/riteshnandal/airline-revenue-management](https://github.com/riteshnandal/airline-revenue-management) |
+| Tableau Public Dashboard | [public.tableau.com/app/profile/riteshnandal](https://public.tableau.com/app/profile/ritesh.kumar8399/viz/AirlineRevenueDashboard_17837825187510/AirlineRevenueDashboard) |
+| LinkedIn Profile | [linkedin.com/in/riteshnandal](https://linkedin.com/in/ritesh-kumar-5a8655261) |
+
+---
+
+## Bullet Points
+
+Copy these directly onto your resume under Projects:
+
+```
+Airline Revenue Management & Ticket Price Analytics Dashboard
+Tools: Excel · SQL (MySQL) · Python · Power BI · Tableau · GitHub
+
+• Built complete end-to-end analytics solution on 10,000+ flight records
+  across full lifecycle — cleaning, EDA, ML modelling, and dashboarding
+
+• Engineered 12 analytical features from raw data including duration
+  parsing, time-of-day segmentation, and price band classification
+
+• Wrote 10 optimised SQL queries using window functions (RANK, SUM OVER,
+  ROWS BETWEEN) for market share, route revenue, and running totals
+
+• Developed Random Forest price prediction model — R² 0.64, MAE ₹1,565
+  — identifying duration and airline as primary ticket price drivers
+
+• Built 3-page Power BI dashboard with 11 DAX measures including
+  MoM Growth, Airline Market Share, and dynamic Top Airline/Route cards
+
+• Published interactive Tableau Public dashboard with 4 views and
+  cross-filter actions — accessible via public URL without login
+
+• Identified Premium segment (18% of volume) drives 35% of total revenue
+  → recommended targeted upsell campaigns for Mid-Range customers
+```
+
+
+## ⚙️ How to Run This Project
+
+```bash
+# Clone the repository
+git clone https://github.com/riteshnandal/airline-revenue-management.git
+cd airline-revenue-management
+
+# Set up Python environment
+python3 -m venv airline_env
+source airline_env/bin/activate        # Mac/Linux
+airline_env\Scripts\activate           # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run notebooks in order
+# 1. Python/01_data_cleaning.ipynb
+# 2. Python/02_eda_visualisations.ipynb
+# 3. Python/03_forecasting_model.ipynb
+
+# SQL setup
+# Import SQL/01_create_schema.sql into MySQL Workbench
+# Run remaining SQL files in numbered order
+
+# Power BI
+# Open Power BI/airline_revenue_dashboard.pbix in Power BI Desktop
+
+# Tableau
+# View live at: public.tableau.com/app/profile/riteshnandal
+```
+
+---
+
+*Ritesh Kumar — Data Analytics Portfolio Project*
+*B.Com → MSc Data Science, Chandigarh University*
+*Open to: Data Analyst · MIS Executive · Reporting Analyst · Business Analyst*
+*GitHub: github.com/riteshnandal · LinkedIn: linkedin.com/in/ritesh-kumar-5a8655261*
+
