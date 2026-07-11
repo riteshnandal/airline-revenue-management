@@ -625,7 +625,7 @@ Build a visually rich interactive dashboard in Tableau Public using the same cle
 |------|--------|
 | Tool | Tableau Public Desktop (free) |
 | Data source | Data/flights_processed.csv |
-| Published at | public.tableau.com/app/profile/riteshnandal |
+| Published at | https://public.tableau.com/app/profile/ritesh.kumar8399/viz/AirlineRevenueDashboard_17837825187510/AirlineRevenueDashboard |
 | Views built | 4 individual views |
 | Dashboard | 1 combined interactive dashboard |
 
