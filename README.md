@@ -1,6 +1,6 @@
 # airline-revenue-management
 Airline Revenue Management Dashboard using Excel, SQL, Power BI and Python
-# Air India Revenue Dashboard Project
+# Airline Revenue Dashboard Project
 
 ## Progress Update
 
@@ -835,7 +835,6 @@ airline-revenue-management/
 
 ## Bullet Points
 
-Copy these directly onto your resume under Projects:
 
 ```
 Airline Revenue Management & Ticket Price Analytics Dashboard
@@ -894,6 +893,62 @@ pip install -r requirements.txt
 # Tableau
 # View live at: public.tableau.com/app/profile/riteshnandal
 ```
+
+---
+
+## Final Summary
+
+## This project was designed to answer five core business questions that an airline revenue management team would typically investigate:
+
+1. Which airlines and routes generate the highest revenue and why?
+2. How does ticket pricing vary across stops, duration, and time of day?
+3. What seasonal and monthly patterns exist in revenue and demand?
+4. How can ticket prices be predicted from operational flight characteristics?
+5. What actionable recommendations can improve revenue per available seat?
+
+## 1. Key Business Insights and Recommendations
+
+### Insight 1 — Revenue concentration risk
+The top 3 airlines account for approximately 65% of total network revenue. This concentration creates dependency risk.
+**Recommendation:** Develop revenue diversification strategy by growing mid-tier airline partnerships and incentivising route expansion from underrepresented carriers.
+
+### Insight 2 — Non-stop route premium
+Non-stop flights command 30–35% higher average prices than equivalent 1-stop routes. These routes have strong pricing power.
+**Recommendation:** Protect non-stop route capacity from low-cost carrier competition. Apply yield management to maximise revenue on these high-value routes first.
+
+### Insight 3 — Seasonal demand concentration
+Revenue peaks sharply in May–June (summer travel season) with prices 20–30% above the annual baseline. October–November shows a secondary peak.
+**Recommendation:** Implement dynamic pricing algorithms triggered by seasonal demand signals. Pre-emptively adjust inventory allocation in Q1 for Q2 peak period.
+
+### Insight 4 — Premium segment revenue disproportionality
+Premium tickets (above ₹10,000) represent only 18% of flight volume but contribute over 35% of total revenue. Mid-Range is the largest volume segment.
+**Recommendation:** Design upsell campaigns targeting Mid-Range customers (₹5,000–₹10,000) — they represent the most accessible revenue uplift opportunity with lowest acquisition cost.
+
+### Insight 5 — Duration as primary price driver
+Flight duration is the strongest predictor of ticket price (correlation r=0.68, highest feature importance in ML model). Long-haul routes command the strongest pricing power.
+**Recommendation:** Long-haul route pricing should be reviewed quarterly and protected from blanket promotional discounting that erodes margin on the network's most valuable inventory.
+
+## 2. Bullet Points
+
+Use these directly on your resume under this project:
+
+**Data Analyst — Project:**
+- Built an end-to-end airline revenue analytics solution processing 10,000+ flight records using Excel, SQL, Python, and Power BI, delivering actionable pricing and route strategy insights
+- Engineered 12 new analytical features from raw flight data including duration parsing, time-of-day segmentation, and price band classification using Python pandas
+- Wrote 10 optimised SQL queries including window functions (RANK, SUM OVER, ROWS BETWEEN) to analyse airline market share, route revenue, and monthly pricing trends
+- Developed a Random Forest price prediction model achieving R² of 0.64 and MAE of ₹1,565, identifying flight duration and airline as the primary ticket price drivers
+- Designed a 3-page interactive Power BI dashboard with 11 DAX measures including MoM Growth, Airline Market Share, and dynamic Top Airline/Route cards
+- Identified that Premium segment tickets (18% of volume) contribute 35% of total revenue, recommending targeted upsell campaigns for Mid-Range customers
+
+---
+
+## 3. Project Links
+
+| Resource | Link |
+|----------|------|
+| GitHub Repository | https://github.com/riteshnandal/airline-revenue-management |
+| Tableau Public Dashboard | https://public.tableau.com/app/profile/ritesh.kumar8399/viz/AirlineRevenueDashboard_17837825187510/AirlineRevenueDashboard |
+| LinkedIn Profile | linkedin.com/in/ritesh-kumar-5a8655262|
 
 ---
 
